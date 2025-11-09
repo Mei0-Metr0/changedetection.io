@@ -1,0 +1,16 @@
+FROM python:3.11-slim-bookworm
+
+# Define o diretório de trabalho dentro do contêiner
+WORKDIR /app
+
+# Copia o arquivo de dependências para o contêiner
+COPY requirements-importer.txt .
+
+# Instala as dependências
+RUN pip install --no-cache-dir -r requirements-importer.txt
+
+# Copia o script principal para o contêiner
+COPY app.py .
+
+# Comando que será executado quando o contêiner iniciar
+CMD [ "python", "./app.py" ]

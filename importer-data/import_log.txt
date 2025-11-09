@@ -1,0 +1,23 @@
+2025-06-25 17:02:07,078 - INFO - Iniciando script. Fases a serem executadas: [0, 1, 2]
+2025-06-25 17:02:07,079 - INFO - --- INICIANDO FASE 1: Coleta de URLs ---
+2025-06-25 17:02:07,079 - INFO - COLETA: Filtro de ano ativado para os anos: ['2025', '2024', '2023']
+2025-06-25 17:02:07,079 - INFO - COLETA: URLs serão salvas em '/app/data/urls_coletadas.txt'.
+2025-06-25 17:02:21,414 - ERROR - COLETA: Erro ao analisar https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/vestibular/edit: 401 Client Error: Unauthorized for url: https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/vestibular/edit
+2025-06-25 17:02:53,179 - ERROR - COLETA: Erro ao analisar https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/vestibular/home-1: 401 Client Error: Unauthorized for url: https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/vestibular/home-1
+2025-06-25 17:08:14,599 - ERROR - COLETA: Erro ao analisar https://www.utfpr.edu.br/cursos/estudenautfpr/modelos-de-declaracoes/modelo-4-dec-n-curs-escol-part.pdf: 404 Client Error: Not Found for url: https://www.utfpr.edu.br/cursos/estudenautfpr/modelos-de-declaracoes/modelo-4-dec-n-curs-escol-part.pdf
+2025-06-25 17:08:33,821 - ERROR - COLETA: Erro ao analisar https://www.utfpr.edu.br/cursos/estudenautfpr/modelos-de-declaracoes/modelo-1-dec-n-ocupa-vaga.pdf: 404 Client Error: Not Found for url: https://www.utfpr.edu.br/cursos/estudenautfpr/modelos-de-declaracoes/modelo-1-dec-n-ocupa-vaga.pdf
+2025-06-25 17:21:34,288 - INFO - COLETA: Fase finalizada. 3104 URLs únicas salvas.
+2025-06-25 17:21:34,294 - INFO - --- INICIANDO FASE 2: Importação para a API ---
+2025-06-25 17:21:34,295 - INFO - API: Buscando lista de URLs já existentes...
+2025-06-25 17:21:34,462 - INFO - API: Encontradas 2169 URLs já monitoradas.
+2025-06-25 17:21:34,891 - INFO - IMPORTAÇÃO: 5 novas URLs para importar. Iniciando envio...
+2025-06-25 17:21:35,046 - ERROR - API: Falha ao enviar URL: https://www.utfpr.edu.br/cursos/estudenautfpr/sisu/documentos-para-matricula/Comprovacao de Renda -> 400 Client Error: BAD REQUEST for url: http://changedetection:5000/api/v1/watch
+2025-06-25 17:21:35,153 - ERROR - API: Falha ao enviar URL: https://www.utfpr.edu.br/cursos/estudenautfpr/sisu/documentos-para-matricula/Declarado PCD -> 400 Client Error: BAD REQUEST for url: http://changedetection:5000/api/v1/watch
+2025-06-25 17:21:35,254 - ERROR - API: Falha ao enviar URL: https://www.utfpr.edu.br/cursos/estudenautfpr/sisu/documentos-para-matricula/Declarado PPI -> 400 Client Error: BAD REQUEST for url: http://changedetection:5000/api/v1/watch
+2025-06-25 17:21:35,355 - ERROR - API: Falha ao enviar URL: https://www.utfpr.edu.br/cursos/estudenautfpr/sisu/documentos-para-matricula/Declarado Quilombola/ -> 400 Client Error: BAD REQUEST for url: http://changedetection:5000/api/v1/watch
+2025-06-25 17:21:35,477 - ERROR - API: Falha ao enviar URL: https://www.utfpr.edu.br/cursos/estudenautfpr/sisu/documentos-para-matricula/Documentacao Pessoal e Academica -> 400 Client Error: BAD REQUEST for url: http://changedetection:5000/api/v1/watch
+2025-06-25 17:21:35,529 - INFO - --- Resumo da Importação para API ---
+2025-06-25 17:21:35,529 - INFO - URLs novas adicionadas com sucesso: 0
+2025-06-25 17:21:35,530 - INFO - URLs que falharam no envio: 5
+2025-06-25 17:21:35,531 - INFO - --- PROCESSAMENTO FINALIZADO ---
+2025-06-25 17:21:35,532 - INFO - Log completo salvo em: /app/data/import_log.txt
